@@ -76,12 +76,11 @@ body{
 
 .modal-header{
     background: $background-dark;
-    color: $lt-gray;
+    color: floralwhite;
+    button{
+        color: floralwhite;
+    }
 }
 .modal-body{
     background: $background-pale;
-}
-.fa-times{
-    color: $lt-gray;
-    font-size: large;
 }

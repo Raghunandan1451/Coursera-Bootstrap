@@ -55,11 +55,9 @@ body {
 
 .modal-header {
   background: #512da8;
-  color: #ddd; }
+  color: floralwhite; }
+  .modal-header button {
+    color: floralwhite; }
 
 .modal-body {
   background: #d1c4e9; }
-
-.fa-times {
-  color: #ddd;
-  font-size: large; }
