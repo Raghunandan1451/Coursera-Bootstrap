@@ -43,7 +43,7 @@ body{
 }
 
 .navbar-dark {
-     background-color: $background-dark;
+    background-color: $background-dark;
 }
 
 .tab-content {
@@ -72,4 +72,16 @@ body{
     position: absolute;
     bottom: 0px;
     z-index: 1;
+}
+
+.modal-header{
+    background: $background-dark;
+    color: $lt-gray;
+}
+.modal-body{
+    background: $background-pale;
+}
+.fa-times{
+    color: $lt-gray;
+    font-size: large;
 }

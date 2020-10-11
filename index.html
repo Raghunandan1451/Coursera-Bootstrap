@@ -12,66 +12,6 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .row-header{
-    margin: 0px auto;
-    padding: 0px auto;
-}
-
-.row-content{
-    margin: 0px auto;
-    padding: 25px 0px 25px 0px;
-    border-bottom: 1px ridge;
-    min-height: 400px;
-}
-
-.footer{
-    background-color: #d1c4e9;
-    margin: 0px auto;
-    padding: 20px 0px 20px 0px;
-}
-
-.jumbotron {
-    padding: 70px 30px 70px 30px;
-    margin: 0px auto;
-    background: #9575cd;
-    color: floralwhite;
-}
-
-address{
-    font-size: 80%;
-    margin: 0px;
-    color: #0f0f0f;
-}
-
-body {
-    padding: 50px 0px 0px 0px;
-    z-index: 0;
-}
-
-.navbar-dark {
-    background-color: #512da8;
-}
-
-form{
-    font-weight: 600;
-}
-
-.carousel{
-    background: #512da8;
-}
-
-.carousel-item{
-    height: 300px;
-}
-
-.carousel-item img{
-    position: absolute;
-    left: 0;
-    top:0;
-    min-height: 300px;
-}
-    </style>
 </head>
 
 <body>
@@ -89,7 +29,7 @@ form{
                     <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -103,7 +43,7 @@ form{
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
                     <button type="buttton" class="close" data-dismiss="modal">
-                        &times;
+                        <span class="fa fa-times"></span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -135,16 +75,16 @@ form{
         </div>
     </div>
 
-    <div id="myReserveFormModal" class="modal fade" role="dialog">
-       <div class="modal-dialog modal-lg" role="content">
-           <div class="modal-content">
-               <div class="modal-header">
-                   <h2 class="modal-title">Reserve a Table</h2>
-                   <button type="button" class="close" data-dismiss="modal">
-                       &times;
-                   </button>
-               </div>
-               <div class="modal-body">
+    <div id="myReserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Reserve a Table</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span class="fa fa-times"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <form>
                         <div class="row d-flex">
                             <div class="col-md-2">Number of Guests</div>
@@ -204,8 +144,8 @@ form{
                         </div>
                     </form>
                </div>
-           </div>
-       </div> 
+            </div>
+        </div> 
     </div>
 
     <header class="jumbotron">
@@ -219,7 +159,7 @@ form{
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#myReserveFormModal" class="btn btn-warning btn-block nav-link text-white">Reserve Table</a>
+                    <a id="myReserveButton" class="btn btn-warning btn-block nav-link text-white">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -377,6 +317,12 @@ form{
                     $('#carouselButton').children('span').removeClass('fa-play');
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
+            });
+            $('#loginButton').click(function() {
+                $('#loginModal').modal('toggle');
+            });
+            $('#myReserveButton').click(function() {
+                $('#myReserveModal').modal('toggle');
             });
         });
     </script>
